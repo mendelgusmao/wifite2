@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from ..util.cracked_file import CrackedFile
 from ..util.color import Color
 
 import re
@@ -71,7 +72,7 @@ class Target(object):
 
         self.decloaked = False  # If ESSID was hidden but we decloaked it.
 
-        self.cracked = False
+        self.cracked = CrackedFile.is_cracked(self.bssid)
 
         self.clients = []
 
