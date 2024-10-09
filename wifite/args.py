@@ -479,7 +479,7 @@ class Arguments(object):
         commands.add_argument('--ignored',
                               action='store_true',
                               dest='ignored',
-                              help=Color.s('Print ignored and previously-cracked access points'))
+                              help=Color.s('Print ignored access points'))
 
         commands.add_argument('-cracked',
                               help=argparse.SUPPRESS,
